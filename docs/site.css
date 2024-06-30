@@ -1,0 +1,93 @@
+@page {
+    size: A4;
+}
+
+@media print {
+    max-height: 297mm;
+    max-width: 210mm;
+}
+
+html {
+    font-size: 62.5%;
+
+    --primary-bg: #ffe0e0;
+    --primary-fg: #fe4500;
+    --secondary-bg: #b3a0a0;
+    --secondary-fg: #ffffff;
+    --nav-size: 12rem;
+    --section-height: calc(100vh - 18rem);
+}
+
+body {
+    height: 84.2rem;
+    width: 59.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-fg);
+    font-family: MuseoSansRounded900, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    margin: 0 0 2rem;
+    font-size: 2rem;
+}
+
+h3 {
+    margin: 1rem 0;
+    color: black;
+}
+
+h3 a {
+    float: right;
+}
+
+header {
+    text-align: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+section {
+    margin: 2rem 0;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+dt {
+    font-weight: bold;
+    margin: 0 0.5rem 0 0;
+}
+
+ul {
+    list-style: disc;
+    margin: 0 0 0 2rem;
+}
+
+em {
+    font-weight: bold;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.main-grid>div:first-of-type {
+    margin: 0 2rem 0 0;
+}
