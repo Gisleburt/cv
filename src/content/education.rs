@@ -23,12 +23,12 @@ pub fn Education() -> Element {
         Qualification::new("BSc Cybernetics and Virtual Worlds", "Bradford University"),
     ];
 
-    let all_qualifications = qualifications
-        .iter()
-        .map(|qualification| rsx!(
+    let all_qualifications = qualifications.iter().map(|qualification| {
+        rsx!(
             dt { {qualification.what} }
             dd { {qualification.from} }
-        ));
+        )
+    });
 
     rsx!(
         Section { title: "Education",

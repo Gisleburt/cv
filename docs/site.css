@@ -8,10 +8,11 @@ html {
     font-size: 62.5%;
 
     --plain-text: #4a4e4d;
-    --plain-text-inverted:  #4a4e4d;
-    --primary-bg: #FFBB00;
+    --plain-text-inverted:  #eee;
+    --primary-bg: transparent;
     --primary-fg: #FB6542;
     --secondary-fg: #375E97;
+    --secondary-bg: #fff;
     --nav-size: 12rem;
     --section-height: calc(100vh - 18rem);
 }
@@ -24,6 +25,11 @@ body {
     line-height: 1.6rem;
     font-family: "Open Sans", sans-serif;
     color: var(--plain-text);
+    background: no-repeat url("./bg1.jpg") ;
+}
+
+#main {
+    background-color: rgba(100, 100, 100, .3);
 }
 
 main {
@@ -40,12 +46,18 @@ main>div:nth-of-type(1) {
     /*border-radius: 99999px 99999px 0 0 ;*/
     margin: -2rem 0 0 0;
     padding: 2rem 1rem 0;
-    z-index: -1;
+}
+
+main>div:nth-of-type(1) em {
+    color: var(--primary-fg);
 }
 
 
 main>div:nth-of-type(2) {
-    margin: 0 0 0 2rem;
+    margin: -2rem 0 0 0;
+    padding: 2rem 2rem 0;
+    background: var(--secondary-bg);
+    min-height: calc(100vh - 13rem);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,7 +101,7 @@ header {
     /*border-radius: 3rem;*/
     background: var(--primary-bg);
     padding: 1rem 0;
-    margin: 2rem 0 2rem;
+    margin: 0 0 2rem;
     line-height: 3rem;
     z-index: 1;
 }

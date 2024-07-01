@@ -27,7 +27,7 @@ impl<'a> FromTo<'a> {
 impl<'a> ToElement for FromTo<'a> {
     fn to_element(&self) -> Element {
         if self.from.is_none() && self.to.is_none() {
-            return rsx!(  );
+            return rsx!();
         }
         let divide = self.from.and(self.to).map(|_| " - ");
         rsx!(
@@ -62,7 +62,7 @@ enum Highlight<'a> {
 impl<'a> ToElement for Highlight<'a> {
     fn to_element(&self) -> Element {
         match self {
-            Highlight::Normal(text) => rsx!( " {text} " ),
+            Highlight::Normal(text) => rsx!(" {text} "),
             Highlight::Emphasis(text) => rsx!(
                 em { {text} }
             ),
@@ -111,7 +111,7 @@ const ROLES: &'static [Role<'static>] = &[
         title: "Principal Engineer",
         from_to: FromTo::const_new(Some("Nov '22"), Some("Dec '23")),
         highlights: &[
-            &[&Highlight::Normal("Mentored and Coached engineers at all levels")],
+            &[&Highlight::Normal("Mentored and coached engineers at all levels")],
             &[
                 &Highlight::Normal("Established a"),
                 &Highlight::Emphasis("working group of 5 principal engineers"),
@@ -259,7 +259,9 @@ pub fn Experience() -> Element {
     });
     rsx!(
         Section { title: "Experience" }
-        {roles}
-        h3 { em {"More on request"} }
+        {roles},
+        h3 {
+            em { "More on request" }
+        }
     )
 }
