@@ -54,6 +54,8 @@ pub fn Skills() -> Element {
     });
 
     rsx!(
-        Section { title: "Skills at a glace", dl { {all_skills} } }
+        Section { title: "Skills at a glance",
+            dl { {all_skills} }
+        }
     )
 }

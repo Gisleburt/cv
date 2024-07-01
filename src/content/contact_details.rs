@@ -31,7 +31,11 @@ pub fn ContactDetails() -> Element {
         ContactDetail::new(LinkType::Web, "Web", "danielmason.com"),
         ContactDetail::new(LinkType::Mail, "Email", "daniel@danielmason.com"),
         ContactDetail::new(LinkType::Web, "GitHub", "github.com/gisleburt"),
-        ContactDetail::new(LinkType::Web,"Linked In","linkedin.com/in/danieljamesmason"),
+        ContactDetail::new(
+            LinkType::Web,
+            "Linked In",
+            "linkedin.com/in/danieljamesmason",
+        ),
     ];
 
     let all_details = contact_details.iter().map(|contact_detail| {
@@ -41,12 +45,16 @@ pub fn ContactDetails() -> Element {
             LinkType::Mail => "mailto:",
         };
         rsx!(
-            dt { {contact_detail.label} }
-            dd { a { href: "{link_prefix}{contact_detail.link}", {contact_detail.link} } }
+            dt { "{contact_detail.label}:" }
+            dd {
+                a { href: "{link_prefix}{contact_detail.link}", {contact_detail.link} }
+            }
         )
     });
 
     rsx!(
-        Section { title: "Contact Details", dl { {all_details} } }
+        Section { title: "Contact Details",
+            dl { {all_details} }
+        }
     )
 }

@@ -2,6 +2,7 @@
 
 mod components;
 mod content;
+mod transforms;
 
 use dioxus::prelude::*;
 use tracing::Level;
@@ -42,9 +43,7 @@ fn Home() -> Element {
     rsx! {
         Header { name: "Daniel Mason", title: "Engineering Lead" }
 
-        div {
-            class: "main-grid",
-
+        main {
             div {
 
                 PersonalStatement {}
@@ -56,14 +55,7 @@ fn Home() -> Element {
                 Education {}
             }
 
-            div {
-
-                Experience {}
-            }
-
+            div { Experience {} }
         }
-
-
-
     }
 }
