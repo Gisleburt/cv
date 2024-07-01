@@ -3,6 +3,7 @@
 # App (Project) Name
 name = "daniel-mason-cv"
 
+
 # Dioxus App Default Platform
 # desktop, web
 default_platform = "web"
@@ -17,6 +18,8 @@ asset_dir = "assets"
 
 # HTML title tag content
 title = "Daniel Mason CV"
+
+base_path = "cv"
 
 [web.watcher]
 
