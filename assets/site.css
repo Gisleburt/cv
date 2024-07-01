@@ -1,29 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @page {
     size: A4;
-}
-
-@media print {
-    max-height: 297mm;
-    max-width: 210mm;
 }
 
 html {
     font-size: 62.5%;
 
-    --primary-bg: #ffe0e0;
-    --primary-fg: #fe4500;
-    --secondary-bg: #b3a0a0;
-    --secondary-fg: #ffffff;
+    --plain-text: #4a4e4d;
+    --plain-text-inverted:  #4a4e4d;
+    --primary-bg: #FFBB00;
+    --primary-fg: #FB6542;
+    --secondary-fg: #375E97;
     --nav-size: 12rem;
     --section-height: calc(100vh - 18rem);
 }
 
 body {
-    height: 84.2rem;
-    width: 80rem;
+    width: 90rem;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+    color: var(--plain-text);
 }
 
 main {
@@ -33,9 +33,14 @@ main {
 
 main>div:nth-of-type(1) {
     background-color: var(--primary-bg);
-    border-radius: 99999px 99999px 0 0 ;
+    color: var(--plain-text-inverted);
+    /*border-top: 1px solid var(--primary-fg);*/
+    /*border-left: 1px solid var(--primary-fg);*/
+    /*border-right: 1px solid var(--primary-fg);*/
+    /*border-radius: 99999px 99999px 0 0 ;*/
     margin: -2rem 0 0 0;
-    padding: 9rem 1rem 0;
+    padding: 2rem 1rem 0;
+    z-index: -1;
 }
 
 
@@ -45,7 +50,8 @@ main>div:nth-of-type(2) {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--primary-fg);
-    font-family: MuseoSansRounded900, sans-serif;
+    /*font-family: MuseoSansRounded900, sans-serif;*/
+    font-weight: bold;
 }
 
 h1 {
@@ -78,6 +84,14 @@ h3 a, h3 span {
 
 header {
     text-align: center;
+    border-top: .5rem solid var(--primary-fg);
+    border-bottom: .5rem solid var(--primary-fg);
+    /*border-radius: 3rem;*/
+    background: var(--primary-bg);
+    padding: 1rem 0;
+    margin: 2rem 0 2rem;
+    line-height: 3rem;
+    z-index: 1;
 }
 
 header h2 {
@@ -86,6 +100,10 @@ header h2 {
 
 section {
     margin: 2rem 0;
+}
+
+div>section:nth-of-type(1) {
+    margin: 0 0 2rem;
 }
 
 p {
@@ -112,10 +130,21 @@ ul {
     padding: 0 0 0 2.5rem;
 }
 
+h3 em {
+    color: var(--primary-fg);
+}
+
 em {
     font-weight: bold;
+    color: var(--secondary-fg);
 }
 
 a, a:visited {
-    color: blue;
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: underline;
 }

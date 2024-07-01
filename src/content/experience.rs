@@ -98,7 +98,7 @@ const ROLES: &'static [Role<'static>] = &[
             &[&Highlight::Normal("Incorporated a company to manage revenue")],
             &[
                 &Highlight::Normal("Built the website using Dioxus, a"),
-                &Highlight::Emphasis("state of the art frontend framework"),
+                &Highlight::Emphasis("state of the art Rust frontend framework"),
                 &Highlight::Normal("of which Daniel is an"),
                 &Highlight::Emphasis("early adopter"),
             ],
@@ -123,10 +123,10 @@ const ROLES: &'static [Role<'static>] = &[
                 &Highlight::Normal("before architecting a passwordless auth system"),
             ],
             &[
-                &Highlight::Emphasis("Lead a team of 4 engineers"),
+                &Highlight::Emphasis("Led a team of 4 engineers"),
                 &Highlight::Normal("to build the candidate auth system"),
             ],
-            &[&Highlight::Normal("Joined the leadership teams for Beamery’s Frontend and Backend Tribes")],
+            &[&Highlight::Normal("Joined leadership teams for the Frontend and Backend Tribes")],
             &[
                 &Highlight::Normal("Presented"),
                 &Highlight::Emphasis("3 “lunch and learns”"),
@@ -167,11 +167,11 @@ const ROLES: &'static [Role<'static>] = &[
             ],
             &[&Highlight::Normal("Stayed on top of reports’ personal goals to ensure they achieved them and helped them progress their careers")],
             &[
-                &Highlight::Normal("Cultivated an environment of"),
+                &Highlight::Normal("Cultivated"),
                 &Highlight::Emphasis("psychological safety"),
-                &Highlight::Normal("and prioritised team growth"),
+                &Highlight::Normal("and prioritised team member growth"),
             ],
-            &[&Highlight::Normal("Successfully coached the manager who replaced me")],
+            &[&Highlight::Normal("Successfully coached the manager who succeeded me")],
         ],
     },
     Role {
@@ -181,17 +181,17 @@ const ROLES: &'static [Role<'static>] = &[
         from_to: FromTo::const_new(Some("Oct '19"), Some("Sept '20")),
         highlights: &[
             &[
-                &Highlight::Emphasis("Immediately"),
-                &Highlight::Normal("resolved a bug"),
-                &Highlight::Emphasis("that caused one of their systems to be"),
-                &Highlight::Normal("unavailable for 45mins every day"),
+                &Highlight::Normal("Immediately"),
+                &Highlight::Emphasis("resolved a bug"),
+                &Highlight::Normal("that caused one of their systems to be"),
+                &Highlight::Emphasis("unavailable for 45mins every day"),
             ],
             &[&Highlight::Normal("Formally career coached a data scientist and informally coached several engineers")],
-            &[&Highlight::Normal("Gave multiple “lunch and learns” (the most popular of which covered the impact of thirsty Victorians on modern cryptography)")],
             &[
-                &Highlight::Normal("Created a novel resolution for an advertising bug"),
-                &Highlight::Emphasis("mitigating losses on ad spend of ~12%"),
+                &Highlight::Normal("Used responsive design to"),
+                &Highlight::Emphasis("mitigate losses on ad spend of ~12%"),
             ],
+            &[&Highlight::Normal("Gave multiple “lunch and learns” (the most popular of which covered the impact of thirsty Victorians on modern cryptography)")],
         ],
     },
     Role {
@@ -201,7 +201,7 @@ const ROLES: &'static [Role<'static>] = &[
         from_to: FromTo::const_new(Some("Nov '17"), Some("Oct '19")),
         highlights: &[
             &[
-                &Highlight::Normal("Planned and developed the platform architecture that took a service struggling service to"),
+                &Highlight::Normal("Planned and developed the architecture that took a platform struggling service to"),
                 &Highlight::Emphasis("over 38x the number of users"),
                 &Highlight::Normal("it had previously supported"),
             ],
@@ -224,11 +224,11 @@ const ROLES: &'static [Role<'static>] = &[
         from_to: FromTo::const_new(Some("May '16"), Some("Nov '17")),
         highlights: &[
             &[&Highlight::Normal("Successfully advocated for and coached a junior engineer at risk of redundancy so that they could join our team")],
-            &[&Highlight::Normal("Took a greenfield project to production")],
             &[
-                &Highlight::Normal("Evangelized Continuous Deployment, participated in the CD working group and"),
+                &Highlight::Normal("Evangelised Continuous Deployment, participated in the CD working group and"),
                 &Highlight::Emphasis("influenced business wide decisions"),
             ],
+            &[&Highlight::Normal("Took a greenfield project to production")],
         ],
     },
 ];

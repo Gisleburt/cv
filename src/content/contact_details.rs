@@ -33,7 +33,7 @@ pub fn ContactDetails() -> Element {
         ContactDetail::new(LinkType::Web, "GitHub", "github.com/gisleburt"),
         ContactDetail::new(
             LinkType::Web,
-            "Linked In",
+            "LinkedIn",
             "linkedin.com/in/danieljamesmason",
         ),
     ];
