@@ -1,9 +1,6 @@
 use crate::components::*;
+use crate::transforms::*;
 use dioxus::prelude::*;
-
-trait ToElement {
-    fn to_element(&self) -> Element;
-}
 
 #[derive(Copy, Clone)]
 struct FromTo<'a> {
@@ -34,10 +31,11 @@ impl<'a> ToElement for FromTo<'a> {
         }
         let divide = self.from.and(self.to).map(|_| " - ");
         rsx!(
-            br {}
-            {self.from},
-            {divide},
-            {self.to}
+            span {
+                {self.from},
+                {divide},
+                {self.to}
+            }
         )
     }
 }
@@ -48,8 +46,8 @@ struct RoleLink<'a> {
     href: &'a str,
 }
 
-impl<'a> RoleLink<'a> {
-    pub fn render(&self) -> Element {
+impl<'a> ToElement for RoleLink<'a> {
+    fn to_element(&self) -> Element {
         rsx!(
             a { href: self.href, {self.title} }
         )
@@ -132,7 +130,7 @@ const ROLES: &'static [Role<'static>] = &[
             &[
                 &Highlight::Normal("Presented"),
                 &Highlight::Emphasis("3 “lunch and learns”"),
-                &Highlight::Normal("on various topics (all of which are on danielmason.com)"),
+                &Highlight::Normal("(all of which are on danielmason.com)"),
             ],
             &[
                 &Highlight::Normal("Helped team go from"),
@@ -149,12 +147,14 @@ const ROLES: &'static [Role<'static>] = &[
         highlights: &[
             &[
                 &Highlight::Normal("Led the internationalisation team, then "),
-                &Highlight::Normal("influenced the wider business"),
+                &Highlight::Emphasis("influenced the wider business"),
                 &Highlight::Normal("to change practices to not require a specialised team, pivoting my team to content"),
             ],
             &[
-                &Highlight::Normal("Grew the team"),
-                &Highlight::Emphasis("from 2 engineers to 8 engineers"),
+                &Highlight::Normal("Grew team"),
+                &Highlight::Emphasis("from 2 engineers to 8"),
+                &Highlight::Normal("and successfully processed"),
+                &Highlight::Emphasis("6 promotions"),
             ],
             &[
                 &Highlight::Normal("Developed a new way to store and render content that was adopted by other teams, reducing the effort to produce a new page"),
@@ -242,7 +242,7 @@ pub fn Experience() -> Element {
                     em { {role.company} }
                     " - "
                     {role.title},
-                    {role.link.map(|link| link.render())},
+                    {role.link.map(|link| link.to_element())},
                     {role.from_to.to_element()}
                 }
                 ul {
@@ -260,5 +260,6 @@ pub fn Experience() -> Element {
     rsx!(
         Section { title: "Experience" }
         {roles}
+        h3 { em {"More on request"} }
     )
 }

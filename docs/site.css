@@ -26,6 +26,23 @@ body {
     font-size: 1.4rem;
 }
 
+main {
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+}
+
+main>div:nth-of-type(1) {
+    background-color: var(--primary-bg);
+    border-radius: 99999px 99999px 0 0 ;
+    margin: -2rem 0 0 0;
+    padding: 9rem 1rem 0;
+}
+
+
+main>div:nth-of-type(2) {
+    margin: 0 0 0 2rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: var(--primary-fg);
     font-family: MuseoSansRounded900, sans-serif;
@@ -45,7 +62,17 @@ h3 {
     color: black;
 }
 
-h3 a {
+h3::before {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    content: '';
+    border: 1px solid black;
+    border-radius: 100%;
+    margin: 0 0.5rem 0 -0.5rem;
+}
+
+h3 a, h3 span {
     float: right;
 }
 
@@ -80,19 +107,15 @@ dt {
 }
 
 ul {
+    border-left: 1px solid black;
     list-style: disc;
-    margin: 0 0 0 2rem;
+    padding: 0 0 0 2.5rem;
 }
 
 em {
     font-weight: bold;
 }
 
-main {
-    display: grid;
-    grid-template-columns: .5fr 1fr;
-}
-
-main>div:nth-of-type(2) {
-    margin: 0 0 0 2rem;
+a, a:visited {
+    color: blue;
 }

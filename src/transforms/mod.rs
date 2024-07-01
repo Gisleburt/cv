@@ -1,3 +1,5 @@
+use dioxus::dioxus_core::Element;
+
 pub fn create_safe_name(input: &str) -> String {
     input
         .chars()
@@ -9,6 +11,10 @@ pub fn create_safe_name(input: &str) -> String {
         .filter(|c| c.is_alphanumeric() || *c == '-')
         .map(|c| c.to_ascii_lowercase())
         .collect()
+}
+
+pub trait ToElement {
+    fn to_element(&self) -> Element;
 }
 
 #[cfg(test)]
