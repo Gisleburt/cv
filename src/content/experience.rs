@@ -87,6 +87,11 @@ const ROLES: &'static [Role<'static>] = &[
         from_to: FromTo::const_default(),
         highlights: &[
             &[
+                &Highlight::Normal("Created a company to"),
+                &Highlight::Emphasis("demystify Rust"),
+                &Highlight::Normal("and other complex software engineering challenges"),
+            ],
+            &[
                 &Highlight::Normal("Grew a YouTube channel to"),
                 &Highlight::Emphasis("over 500 subscribers in just 8 videos"),
             ],

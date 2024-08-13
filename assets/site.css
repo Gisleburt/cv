@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-@page {
-    size: A4;
-}
-
 html {
     font-size: 62.5%;
 
@@ -13,11 +9,12 @@ html {
     --primary-fg: #FB6542;
     --secondary-fg: #375E97;
     --secondary-bg: #fff;
-    --nav-size: 12rem;
-    --section-height: calc(100vh - 18rem);
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     width: 90rem;
     margin-left: auto;
     margin-right: auto;
@@ -29,21 +26,32 @@ body {
 }
 
 #main {
-    background-color: rgba(100, 100, 100, .3);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(3rem);
+    height: 100%;
+}
+
+/* Blur does not work for print so we'll give the background a slightly white glaze, not as nice but 🤷🏻‍♂️ */
+@media print {
+    #main {
+        background-color: rgba(100, 100, 100, .3);
+    }
 }
 
 main {
     display: grid;
     grid-template-columns: .6fr 1fr;
+    flex-grow: 1;
+}
+
+main>div {
+    height: 100%;
 }
 
 main>div:nth-of-type(1) {
     background-color: var(--primary-bg);
     color: var(--plain-text-inverted);
-    /*border-top: 1px solid var(--primary-fg);*/
-    /*border-left: 1px solid var(--primary-fg);*/
-    /*border-right: 1px solid var(--primary-fg);*/
-    /*border-radius: 99999px 99999px 0 0 ;*/
     margin: -2rem 0 0 0;
     padding: 2rem 1rem 0;
 }
@@ -57,12 +65,10 @@ main>div:nth-of-type(2) {
     margin: -2rem 0 0 0;
     padding: 2rem 2rem 0;
     background: var(--secondary-bg);
-    min-height: calc(100vh - 13rem);
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--primary-fg);
-    /*font-family: MuseoSansRounded900, sans-serif;*/
     font-weight: bold;
 }
 
@@ -98,12 +104,10 @@ header {
     text-align: center;
     border-top: .5rem solid var(--primary-fg);
     border-bottom: .5rem solid var(--primary-fg);
-    /*border-radius: 3rem;*/
     background: var(--primary-bg);
     padding: 1rem 0;
     margin: 0 0 2rem;
     line-height: 3rem;
-    z-index: 1;
 }
 
 header h2 {
