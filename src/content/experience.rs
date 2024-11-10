@@ -82,9 +82,9 @@ struct Role<'a> {
 const ROLES: &'static [Role<'static>] = &[
     Role {
         company: "Fio's Quest",
-        link: Some(RoleLink{ title: "fios-quest.com", href: "https://fios-quest.com"}),
+        link: None,
         title: "Founder",
-        from_to: FromTo::const_default(),
+        from_to: FromTo::const_new(Some("Jan '24"), None),
         highlights: &[
             &[
                 &Highlight::Normal("Created a company to"),
@@ -147,7 +147,7 @@ const ROLES: &'static [Role<'static>] = &[
     Role {
         company: "Peloton",
         link: None,
-        title: "Engineering Lead / Engineering Manager",
+        title: "Engineering Manager",
         from_to: FromTo::const_new(Some("Sept '20"), Some("Nov '22")),
         highlights: &[
             &[

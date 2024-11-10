@@ -6,37 +6,35 @@ use indoc::indoc;
 pub fn PersonalStatement() -> Element {
     let statements = [
         rsx!(
-            p {
-                {indoc!{"
-                    Early in my career, a colleague was at risk of redundancy, a competent engineer
-                    from a different team. At the same time, our team was hiring.
-                "}}
-            }
+            {"Throughout my five years in technical leadership I've always believed that"}
+            em { " the real 10x engineers are those helping everyone around them achieve more " }
+            {indoc! {"
+                . This has been the north star of leadership style, show my team what supporting
+                each other looks like, give them the tools they need, and help them grow, and they
+                will always deliver to their best.
+            "}}
         ),
-        rsx!(
-            p {
-                {indoc!{"
-                    I successfully petitioned to train the other engineer and was given eight weeks
-                    to show them the ropes, after which they joined my team, being immediately
-                    productive, saving the business money in redundancy and hiring.
-                "}}
-            }
-        ),
-        rsx!(
-            p {
-                {indoc!{"
-                    That engineers' success is their own, but it taught me to understand a business
-                    holistically. It stoked my passion to help those around me grow, I believe
-                "}},
-                em { "the real 10x engineers are those helping everyone around them achieve more." }
-            }
-        ),
+        rsx!({
+            indoc! {"
+                Hire me to build strong teams of people who deliver value through understanding
+                the business requirements and the application of engineering excellence. This is
+                achieved through building confidence and trust and a culture of support and self
+                development.
+            "}
+        }),
+        rsx!({
+            indoc! {"
+                Self development is my goal too, I want to keep learning how to be a better manager,
+                particularly continue learning how to best align with other teams and work on larger
+                projects.
+            "}
+        }),
     ];
 
     rsx!(
         Section { title: "Personal Statement",
             for statement in statements {
-                { statement }
+               p {{ statement }}
             }
         }
     )

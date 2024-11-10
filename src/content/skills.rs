@@ -9,6 +9,7 @@ pub fn Skills() -> Element {
         SkillList(
             "Leadership",
             &[
+                "Engineering Manager",
                 "Architect",
                 "Tech Evangelist",
                 "People Manager",
@@ -35,7 +36,7 @@ pub fn Skills() -> Element {
                 "mdBook",
             ],
         ),
-        SkillList("Methodology", &["Agile", "TDD", "BDD", "DDD"]),
+        SkillList("Methodology", &["Agile", "TDD", "BDD", "DDD", "CI/CD", "Scrum", "Kanban", "Scrumban"]),
         SkillList(
             "Frameworks",
             &["React", "Next.js", "Express", "Actix", "Dioxus"],
