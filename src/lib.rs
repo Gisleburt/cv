@@ -5,42 +5,32 @@ mod content;
 mod transforms;
 
 use dioxus::prelude::*;
-use tracing::Level;
 
 use components::*;
 use content::*;
 
 #[derive(Clone, Routable, Debug, PartialEq)]
-enum Route {
+pub enum Route {
     #[route("/")]
     Home {},
-    // #[route("/blog/:id")]
-    // Blog { id: i32 },
 }
 
-fn main() {
-    // Init logger
-    dioxus_logger::init(Level::INFO).expect("failed to init logger");
-    launch(App);
-}
-
-fn App() -> Element {
+pub fn App() -> Element {
     rsx! {
         Router::<Route> {}
     }
 }
 
-// #[component]
-// fn Blog(id: i32) -> Element {
-//     rsx! {
-//         Link { to: Route::Home {}, "Go to counter" }
-//         "Blog post {id}"
-//     }
-// }
+const RESET_CSS: Asset = asset!("/assets/reset.css");
+const SITE_CSS: Asset = asset!("/assets/site.css");
 
 #[component]
 fn Home() -> Element {
     rsx! {
+        document::Link { rel: "stylesheet", href: RESET_CSS }
+        document::Link { rel: "stylesheet", href: SITE_CSS }
+
+
         Header { name: "Daniel Mason", title: "Engineering Lead" }
 
         main {
