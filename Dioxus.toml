@@ -8,9 +8,6 @@ name = "daniel-mason-cv"
 # desktop, web
 default_platform = "web"
 
-# `build` & `serve` dist path
-out_dir = "docs"
-
 # resource (assets) file folder
 asset_dir = "assets"
 
@@ -23,24 +20,4 @@ base_path = "cv"
 
 [web.watcher]
 
-# when watcher trigger, regenerate the `index.html`
-reload_html = true
-
-# which files or dirs will be watcher monitoring
-watch_path = ["src", "assets"]
-
-# include `assets` in web platform
-[web.resource]
-
-# CSS style file
-
-style = ["reset.css", "site.css"]
-
-# Javascript code file
-script = []
-
-[web.resource.dev]
-
-# Javascript code file
-# serve: [dev-server] only
-script = []
+index_on_404 = true

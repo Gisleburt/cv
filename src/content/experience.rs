@@ -15,13 +15,6 @@ impl<'a> FromTo<'a> {
     ) -> FromTo<'static> {
         FromTo { from, to }
     }
-
-    pub const fn const_default() -> FromTo<'static> {
-        FromTo {
-            from: None,
-            to: None,
-        }
-    }
 }
 
 impl<'a> ToElement for FromTo<'a> {
