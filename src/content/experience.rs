@@ -92,7 +92,6 @@ struct Role<'a> {
     highlights: &'a [&'a [&'a Highlight<'a>]],
 }
 
-// ToDo: Investigate if I can replace the big highlights lists with a const nom parser
 const ROLES: &'static [Role<'static>] = &[
     Role {
         company: "Fio's Quest",
