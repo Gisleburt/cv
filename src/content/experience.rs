@@ -183,6 +183,7 @@ pub fn Experience() -> Element {
         rsx!(
             div {
                 h3 {
+                    class: "title",
                     em { {role.company} }
                     " - "
                     {role.title},
@@ -205,6 +206,7 @@ pub fn Experience() -> Element {
         Section { title: "Experience" }
         {roles},
         h3 {
+            class: "title",
             em { "More on request" }
         }
     )

@@ -6,7 +6,7 @@ pub fn Section(title: String, children: Element) -> Element {
     let id = create_safe_name(&title);
     rsx!(
         section { id,
-            h2 { {title} }
+            h2 { class: "title", {title} }
             {children}
         }
     )

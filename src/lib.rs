@@ -35,6 +35,7 @@ fn Home() -> Element {
 
         main {
             div {
+                class: "column left",
 
                 PersonalStatement {}
 
@@ -45,7 +46,11 @@ fn Home() -> Element {
                 Education {}
             }
 
-            div { Experience {} }
+            div {
+                class: "column right",
+
+                Experience {}
+            }
         }
     }
 }
