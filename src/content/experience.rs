@@ -99,10 +99,12 @@ const ROLES: &'static [Role<'static>] = &[
         title: "Founder",
         from_to: FromTo::const_new(Some("Jan '24"), None),
         highlights: highlight_list!(
-            { "Created a company to" ["demystify Rust"] "and other complex software engineering challenges" }
-            { "Wrote an online book called" ["Idiomatic Rust in Simple Steps"] }
             { "Taught" ["thousands of people"] "the basics of Rust" }
-            { "Built and" ["monetised"] "multiple greenfield apps and websites using Rust and Dioxus" }
+            { "Wrote an online book called" ["Idiomatic Rust in Simple Steps"] }
+            { "Developed a way to" ["teach the complexities of lifetimes"] "with kites" }
+            { "Built and" ["monetised"] "greenfield apps and websites using Rust and Dioxus" }
+            { "Created a company to" ["demystify the complexities" ] "of software engineering" }
+            { "Produced" ["dozens of videos"] "to teach programming" }
         ),
     },
     Role {
@@ -111,9 +113,10 @@ const ROLES: &'static [Role<'static>] = &[
         title: "Principal Engineer",
         from_to: FromTo::const_new(Some("Nov '22"), Some("Dec '23")),
         highlights: highlight_list!(
-            { "Mentored and coached engineers at all levels" }
             { "Established a" ["working group of principal engineers"] "to manage alignment across multiple teams" }
-            { "Authored a comprehensive review of" ["5 IDaaS providers"] "before architecting a passwordless auth system" }
+            { ["Mentored and coached"] "engineers at all levels from Junior to Principal" }
+            { "Authored a comprehensive review of" ["5 IDaaS providers"] }
+            { "Architected a" ["passwordless auth system,"] "unlocking new revenue" }
             { ["Led a team of engineers"] "to build the candidate auth system" }
             { "Joined" ["leadership teams"] " for the Frontend and Backend Tribes" }
             { "Presented" ["3 “lunch and learns”"] "(all of which are on danielmason.com)" }
@@ -126,9 +129,10 @@ const ROLES: &'static [Role<'static>] = &[
         title: "Engineering Manager",
         from_to: FromTo::const_new(Some("Sept '20"), Some("Nov '22")),
         highlights: highlight_list!(
-                { "Led the internationalisation team, then " ["influenced the wider business"] "to change practices to not require a specialised team, pivoting my team to content" }
-                { "Grew team" ["from 2 engineers to 8"] "and successfully processed" ["6 promotions"] }
-                { "Developed a new way to store and render content that was adopted by other teams, reducing the effort to produce a new page" ["from 10 days with 2 engineers, to 0.5 days with 0 engineers"] }
+                { "Managed the engineers for the internationalisation team" }
+                { ["Influenced the wider business"] "to change practices to not require a specialised internationalisation team, pivoting my team to content" }
+                { "Grew team" ["from 2 engineers to 8"] "and successfully advocated for and supported my staff through" ["6 promotions"] }
+                { "Developed a new way to store and render content that was adopted by other teams, reducing the effort to produce a new page" ["from 10 days with 2 engineers, to half a day with no engineers"] }
                 { "Optimised project management to  improve reliability of estimations," ["reduced whole team meetings by 75%"] "and increased team happiness" }
                 { "Stayed on top of reports’ personal goals to ensure they achieved them and helped them progress their careers" }
                 { "Cultivated" ["psychological safety"] "and prioritised team member growth" }
@@ -143,8 +147,8 @@ const ROLES: &'static [Role<'static>] = &[
         highlights: highlight_list!(
             { "Immediately" ["resolved a bug"] "that caused one of their systems to be" ["unavailable for 45mins every day"] }
             { "Formally career coached a data scientist and informally coached several engineers" }
-            { "Used responsive design to" ["mitigate losses on ad spend of ~12%"] }
-            { "Gave multiple “lunch and learns” (the most popular of which covered the impact of thirsty Victorians on modern cryptography)" }
+            { "Used responsive design to" ["mitigate a 12% loss on ad spend"] }
+            { "Gave multiple " ["“lunch and learns”"] " (the most popular was on cryptography)" }
         ),
     },
     Role {
@@ -153,10 +157,11 @@ const ROLES: &'static [Role<'static>] = &[
         title: "Senior Software Engineer",
         from_to: FromTo::const_new(Some("Nov '17"), Some("Oct '19")),
         highlights: highlight_list!(
-            { "Planned and developed the architecture that took a platform struggling service to" ["over 38x the number of users"] "it had previously supported" }
+            { "Planned and developed the architecture that took a platform struggling to serve 1000 users to" ["38,000 when I left"] "and" ["over 250,000"] "today" }
             { "Built a Rust service that was" ["4x faster and 5x more memory efficient"] "than an equivalent Node service" }
             { "Coached two junior engineers, including" ["teaching them Rust"] }
-            { "Designed, documented and deployed the Continuous Deployment processes" }
+            { "Designed, documented and deployed the CI/CD processes" }
+            { "Developed a data backup system that not only kept data safe but could be " ["used to test new code"] " before deploying to production" }
         ),
     },
     Role {
