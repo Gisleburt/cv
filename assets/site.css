@@ -47,14 +47,14 @@ body {
 main {
     flex: 1 1 auto;
     display: grid;
-    grid-template-columns: .6fr 1fr;
+    grid-template-columns: .5fr 1fr;
     height: 100%;
 }
 
 .column.left {
     background-color: var(--column-left-bg);
     color: var(--column-left-fg);
-    padding: 2rem 1rem 0;
+    padding: 2rem 1rem;
     /*border-right: .5rem solid var(--primary-fg);*/
 }
 
@@ -68,7 +68,7 @@ main {
 }
 
 .column.right {
-    padding: 2rem 2rem 0;
+    padding: 2rem 2rem 3rem;
     background: var(--column-right-bg);
     color: var(--column-right-fg);
 }
@@ -119,7 +119,8 @@ header {
     color: var(--header-fg);
     background: var(--header-bg);
     margin-bottom: -5rem;
-    padding: 3rem 2rem 4rem;    line-height: 3rem;
+    padding: 3rem 2rem 4rem;
+    line-height: 3rem;
     /* Jaunty */
     clip-path: polygon(
             0 0, /* left top */
@@ -133,8 +134,27 @@ header h2 {
     margin: 0;
 }
 
+footer {
+    color: var(--header-fg);
+    background: var(--header-bg);
+    margin-top: -5rem;
+    padding: 5rem 2rem 2rem;
+    line-height: 2rem;
+    /* Jaunty */
+    clip-path: polygon(
+            0 0, /* left top */
+            100% 35%, /* right top */
+            100% 100%, /* right bottom */
+            0 100% /* left bottom */
+    );
+}
+
 section {
     margin: 2rem 0;
+}
+
+footer section {
+    margin: 0;
 }
 
 p {
@@ -148,7 +168,7 @@ dt {
 
 #contact-details dl {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 0.35fr 1fr .45fr 1.5fr .35fr 1fr;
 }
 
 #contact-details dt {

@@ -31,7 +31,7 @@ fn Home() -> Element {
         document::Link { rel: "stylesheet", href: SITE_CSS }
 
 
-        Header { name: "Daniel Mason", title: "Engineering Lead" }
+        Header { name: "Daniel Mason", title: "Engineering Leadership" }
 
         main {
             div {
@@ -41,8 +41,6 @@ fn Home() -> Element {
 
                 Skills {}
 
-                ContactDetails {}
-
                 Education {}
             }
 
@@ -51,6 +49,10 @@ fn Home() -> Element {
 
                 Experience {}
             }
+        }
+        
+        Footer {
+            ContactDetails {}
         }
     }
 }
