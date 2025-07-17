@@ -101,7 +101,7 @@ const ROLES: &'static [Role<'static>] = &[
         highlights: highlight_list!(
             { "Taught" ["thousands of people"] "the basics of Rust" }
             { "Wrote an online book called" ["Idiomatic Rust in Simple Steps"] }
-            { "Developed a way to" ["teach the complexities of lifetimes"] "with kites" }
+            // { "Developed a way to" ["teach the complexities of lifetimes"] "with kites" }
             { "Built and" ["monetised"] "greenfield apps and websites using Rust and Dioxus" }
             { "Created a company to" ["demystify the complexities" ] "of software engineering" }
             { "Produced" ["dozens of videos"] "to teach programming" }
@@ -146,7 +146,7 @@ const ROLES: &'static [Role<'static>] = &[
         from_to: FromTo::const_new(Some("Oct '19"), Some("Sept '20")),
         highlights: highlight_list!(
             { "Immediately" ["resolved a bug"] "that caused one of their systems to be" ["unavailable for 45mins every day"] }
-            { "Formally career coached a data scientist and informally coached several engineers" }
+            { "Formally coached a data scientist and informally coached several engineers" }
             { "Used responsive design to" ["mitigate a 12% loss on ad spend"] }
             { "Gave multiple " ["“lunch and learns”"] " (the most popular was on cryptography)" }
         ),
