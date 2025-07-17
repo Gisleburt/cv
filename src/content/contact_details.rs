@@ -1,11 +1,22 @@
 use crate::components::*;
 use dioxus::prelude::*;
+use crate::transforms::ToElement;
 
 #[derive(Copy, Clone)]
 enum LinkType {
     Web,
     Tel,
     Mail,
+}
+
+impl LinkType {
+    pub fn prefix(&self) -> &'static str {
+        match self {
+            LinkType::Web => "https://",
+            LinkType::Tel => "tel:",
+            LinkType::Mail => "mailto:",
+        }
+    }
 }
 
 struct ContactDetail<'a> {
@@ -24,6 +35,19 @@ impl<'a> ContactDetail<'a> {
     }
 }
 
+impl<'a> ToElement for ContactDetail<'a> {
+    fn to_element(&self) -> Element {
+        let link_prefix = self.link_type.prefix();
+        
+        rsx!(
+            dt { "{self.label}:" }
+            dd {
+                a { href: "{link_prefix}{self.link}", {self.link} }
+            }
+        )
+    }
+}
+
 #[component]
 pub fn ContactDetails() -> Element {
     let contact_details = [
@@ -38,23 +62,11 @@ pub fn ContactDetails() -> Element {
         ),
     ];
 
-    let all_details = contact_details.iter().map(|contact_detail| {
-        let link_prefix = match contact_detail.link_type {
-            LinkType::Web => "https://",
-            LinkType::Tel => "tel:",
-            LinkType::Mail => "mailto:",
-        };
-        rsx!(
-            dt { "{contact_detail.label}:" }
-            dd {
-                a { href: "{link_prefix}{contact_detail.link}", {contact_detail.link} }
-            }
-        )
-    });
+    let contact_details_elements = contact_details.iter().map(ToElement::to_element);
 
     rsx!(
         Section { title: "Contact Details",
-            dl { {all_details} }
+            dl { {contact_details_elements} }
         }
     )
 }
